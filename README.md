@@ -1,5 +1,7 @@
 # villin_REIGN
 
+![REIGN Logo](assets/logo.png)
+
 <div align="center">
 
 ![Status](https://img.shields.io/badge/status-active-success.svg)
