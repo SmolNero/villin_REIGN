@@ -6,6 +6,25 @@ authors = ["<smolnero@gmail.com>"]
 description = "Millitary-grade IoT security framework"
 license = "Proprietary License"
 
+[
+lib
+]
+name = "villin_REIGN"
+path = "src/lib.rs"
+
+[[
+bin
+]]
+name = "villin_REIGN"
+path = "src/lib.rs"
+
+[
+dependencies
+]
+tokio = { version = "1.0",features = ["full"] }
+tracing = "0.1"
+thiserror = "1.0"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
