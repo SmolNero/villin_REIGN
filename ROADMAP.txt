@@ -46,9 +46,9 @@ villin_REIGN/
 []  │
 []  ├── src/
 []  │   ├── core/
-[TODO:_04]  │   │   ├── mod.rs                    # Core module exports
-[]  │   │   ├── config.rs                 # Configuration management
-[]  │   │   └── state.rs                  # State management
+[TODO:_01]  │   │   ├── mod.rs                    # Core module exports
+[TODO:_02]  │   │   ├── config.rs                 # Configuration management
+[TODO:_03]  │   │   └── state.rs                  # State management
 []  │   │
 []  │   ├── security/
 []  │   │   ├── mod.rs                    # Security module exports
@@ -85,8 +85,8 @@ villin_REIGN/
 []  │   │   ├── mod.rs                    # Utilities exports
 []  │   │   └── logging.rs                # Logging utilities
 []  │   │
-[TODO:_03]  │   ├── main.rs                       # Application entry
-[TODO:_02]  │   └── lib.rs                        # Library entry
+[x]  │   ├── main.rs                       # Application entry
+[x]  │   └── lib.rs                        # Library entry
 []  │
 []  ├── tests/
 []  │   ├── common/
