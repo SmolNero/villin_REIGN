@@ -12,9 +12,18 @@ pub mod security;
     - Look for src/security/mod.rs or src/security.rs
 """
 pub mod api;
+"""
+    - Declares and makes tge api module public
+    - Looks for src/api/mod.rs or src/api.rs
+"""
 pub mod monitoring;
-
+"""
+    - Declares and makes tthe monitoring module public
+    - Looks for src/monitoring/mod.rs or src/monitoring
+"""
 pub use core::REIGN
+
+
 
 // Library version
 pub const VERSION: &str = env!("CARGO_PKG_VERSION")
