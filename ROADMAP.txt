@@ -46,7 +46,7 @@ villin_REIGN/
 []  │
 []  ├── src/
 []  │   ├── core/
-[TODO_04]  │   │   ├── mod.rs                    # Core module exports
+[TODO:_04]  │   │   ├── mod.rs                    # Core module exports
 []  │   │   ├── config.rs                 # Configuration management
 []  │   │   └── state.rs                  # State management
 []  │   │
@@ -85,8 +85,8 @@ villin_REIGN/
 []  │   │   ├── mod.rs                    # Utilities exports
 []  │   │   └── logging.rs                # Logging utilities
 []  │   │
-[TODO_03]  │   ├── main.rs                       # Application entry
-[TODO_02]  │   └── lib.rs                        # Library entry
+[TODO:_03]  │   ├── main.rs                       # Application entry
+[TODO:_02]  │   └── lib.rs                        # Library entry
 []  │
 []  ├── tests/
 []  │   ├── common/
@@ -125,7 +125,7 @@ villin_REIGN/
 []  │   ├── setup.sh                      # Development setup
 []  │   └── security_audit.sh             # Security audit script
 []  │
-[TODO_01]  ├── Cargo.toml                        # Project manifest
+[X]  ├── Cargo.toml                        # Project manifest
 []  ├── Cargo.lock                        # Dependency lock
 []  ├── README.md                         # Project overview
 []  ├── CHANGELOG.md                      # Version history
