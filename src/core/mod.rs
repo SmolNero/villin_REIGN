@@ -5,12 +5,11 @@ mod config;
 // locate either  config.rs or config/mod.rs
 mod state;
 // locate either  state.rs or state/mod.rs
-// These are private module declartoins
-
+// These are private module declartoins - only visible in scope
 
 // re-export statement that consists of:
-pub use config::Config;
-pub use state::State;
+pub use config::Config; 	// public -> 'use' type in scope -> This allows other code to use Config directly
+pub use state::State;		// state::State - from state module,import State type
 
 pub struct REIGN {
 	config: Config,
