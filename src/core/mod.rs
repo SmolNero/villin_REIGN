@@ -1,6 +1,12 @@
 // Core functionality for villin_REIGHN
-mod config;
+
+mod config;	
+// 'mod' declares a module
+// locate either  config.rs or config/mod.rs
 mod state;
+// locate either  state.rs or state/mod.rs
+// These are private module declartoins
+
 
 // re-export statement that consists of:
 pub use config::Config;
