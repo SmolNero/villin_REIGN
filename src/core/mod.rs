@@ -36,6 +36,8 @@ impl REIGN {
 			config,
 				// Field init shorthand: same as config: config
 			state: State::default(),
+			   // Calls the default() function on State type
+			   // The default() method creates a new instance of State with default values
 		})
 	}
 }
