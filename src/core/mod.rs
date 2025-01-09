@@ -34,6 +34,7 @@ impl REIGN {
 			// Ok is a success variant of Result
 			// Self -> creates new instance of REIGN
 			config,
+				// Field init shorthand: same as config: config
 			state: State::default(),
 		})
 	}
