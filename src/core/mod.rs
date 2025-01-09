@@ -28,7 +28,11 @@ impl REIGN {
 		//	   - Self refers to the REIGN type
 		//	   - Box<dyn std::error::Error> is a trait object for error handling
 		Ok(Self {
+			// Result<T, E> is an enum that represents either:
+				// Ok(T) -> Sueccess (returns a valid result type T)
+				// Err(E) -> Failure (returns an error of type E)
 			// Ok is a success variant of Result
+			// Self -> creates new instance of REIGN
 			config,
 			state: State::default(),
 		})
