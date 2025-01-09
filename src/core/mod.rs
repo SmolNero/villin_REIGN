@@ -12,11 +12,13 @@ pub use config::Config; 	// public -> 'use' type in scope -> This allows other c
 pub use state::State;		// state::State - from state module,import State type
 
 pub struct REIGN {			// Public struct -> 'struct' defines a new structure
-	config: Config,				//Field
-	state: State,
+	config: Config,				//Field named 'config' of a type Config
+	state: State,				// 'state' -> type State
 }
 
-impl REIGN {
+impl REIGN {		
+		// Adding methdods to REIGN struct
+		// All functions (methods) -> to REIGN stuct above		
 	pub fn new(config: Config) -> Result<Self, Box<dyn::error::Error>> {
 		Ok(Self {
 			config,
@@ -24,3 +26,4 @@ impl REIGN {
 		})
 	}
 }
+
