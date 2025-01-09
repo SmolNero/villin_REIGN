@@ -11,8 +11,8 @@ mod state;
 pub use config::Config; 	// public -> 'use' type in scope -> This allows other code to use Config directly
 pub use state::State;		// state::State - from state module,import State type
 
-pub struct REIGN {
-	config: Config,
+pub struct REIGN {			// Public struct -> 'struct' defines a new structure
+	config: Config,				//Field
 	state: State,
 }
 
