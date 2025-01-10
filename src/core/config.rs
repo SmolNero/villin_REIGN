@@ -8,7 +8,7 @@ pub struct Config {
 
 impl Config {
 	pub fn new(api_key: String, Port: u16) -> Self {
-		Self {api_key, port}
+		Self {api_key, Port}
 	}	
 }
 
