@@ -7,6 +7,8 @@ pub struct Config {
 }
 
 impl Config {
-	pub fn new(api_key: Stringm port:)	
+	pub fn new(api_key: Stringm port: u16) - Self {
+		Self {api_key, port}
+	}	
 }
 
