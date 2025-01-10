@@ -1,6 +1,6 @@
 //src/main.rs
 
-use villin_REIGN::REIGN;        // Imports the REIGN struct from our library
+use villin_reign::REIGN;        // Imports the REIGN struct from our library
                                 // This works bescuase of the 'pub use core::REIGN' in lib.rs
 
 fn main(){
