@@ -1,6 +1,6 @@
 // src/core/mod.rs
 // Core functionality for villin_REIGHN
-
+use std::error;
 mod config;	
 // 'mod' declares a module
 // locate either  config.rs or config/mod.rs
@@ -20,7 +20,7 @@ pub struct REIGN {			// Public struct -> 'struct' defines a new structure
 impl REIGN {		
 		// Adding methdods to REIGN struct
 		// All functions (methods) -> to REIGN stuct above		
-	pub fn new(config: Config) -> Result<Self, Box<dyn::error::Error>> {
+	pub fn new(config: Config) -> Result<Self, Box<dyn error::Error>> {
 		// Makes public function, to call -> REIGN::new()
 	  	// fn new(config: Config) -> defines a func named 'new', takes one argument
 		// config: Config -> parameter named 'config' of Type Config
