@@ -1,5 +1,5 @@
 [package]
-name = "villin_REIGN"
+name = "reign"
 version = "0.1.0"
 edition = "2021"
 authors = ["<smolnero@gmail.com>"]
@@ -7,11 +7,11 @@ description = "Millitary-grade IoT security framework"
 license = "Proprietary License"
 
 [lib]
-name = "villin_REIGN"
+name = "villin_reign"
 path = "src/lib.rs"
 
 [[bin]]
-name = "villin_REIGN"
+name = "villin_reign"
 path = "src/main.rs"
 
 [dependencies]
