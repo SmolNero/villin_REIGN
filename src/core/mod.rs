@@ -1,10 +1,14 @@
 // src/core/mod.rs
 // Core functionality for villin_REIGHN
+
 use std::error;
 mod config;	
+
 // 'mod' declares a module
 // locate either  config.rs or config/mod.rs
+
 mod state;
+
 // locate either  state.rs or state/mod.rsk
 // These are private module declartoins - only visible in scope
 
@@ -18,6 +22,7 @@ pub struct REIGN {			// Public struct -> 'struct' defines a new structure
 }
 
 impl REIGN {		
+		
 		// Adding methdods to REIGN struct
 		// All functions (methods) -> to REIGN stuct above		
 	
@@ -32,6 +37,7 @@ impl REIGN {
 		//	   - Box<dyn std::error::Error> is a trait object for error handling
 		
 		Ok(Self {
+			
 			// Result<T, E> is an enum that represents either:
 				// Ok(T) -> Sueccess (returns a valid result type T)
 				// Err(E) -> Failure (returns an error of type E)
