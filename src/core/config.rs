@@ -3,12 +3,12 @@
 pub struct Config {
 	// Configuration fields will go here
 	pub api_key: String,
-	pub Port: u16,
+	pub port: u16,
 }
 
 impl Config {
 	pub fn new(api_key: String, port: u16) -> Self {
-		Self {api_key, Port}
+		Self {api_key, port}
 	}	
 }
 

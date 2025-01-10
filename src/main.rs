@@ -6,16 +6,22 @@ use villin_reign::core::Congfig                                // This works bes
 fn main(){
     println!("villin_REIGN v{}", villin_reign::VERSION);   // Uses Version constant from lib.rs
 
-    // New test congigurations (MIGHT REMOVE DOWN THE ROAD:TODO )
+    // New test congigurations (might remove::TODO:: )
     
     let config = match Config::new (
         Strings::from("default_api_key"),        // API ket
         8080,                                   // Port number 
         3                                      // Security leve (1-5)
-        )
+    ) {
+        Ok(config) => config,
+        Err(e) => config {
+            eprintln!("Congifguration error: {}", e);
+        }
+    };
 
-
-
-
-
+    // Initialize REIGN with our config
+    match REIGN::new(config) {
+        Ok(_reign) => println!("REIGN system initliazed successfully");,
+        Err(e) => eprintln!("Failed to initliaze REIGN {}", e)
+    }
 }
