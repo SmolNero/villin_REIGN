@@ -1,10 +1,11 @@
+// src/core/mod.rs
 // Core functionality for villin_REIGHN
 
 mod config;	
 // 'mod' declares a module
 // locate either  config.rs or config/mod.rs
 mod state;
-// locate either  state.rs or state/mod.rs
+// locate either  state.rs or state/mod.rsk
 // These are private module declartoins - only visible in scope
 
 // re-export statement that consists of:

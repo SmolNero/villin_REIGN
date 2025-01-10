@@ -1,3 +1,4 @@
+// src/lib.rs
 // villin_REIGN - Military-grade IoT security
 
 pub mod core;
