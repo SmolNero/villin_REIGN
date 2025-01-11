@@ -60,7 +60,6 @@ impl REIGN {
 		if !self.state.is_initialized {
 			let loader = LoadingBar::new("System state init", 2);
 			loader.start()
-		
 		}
 
 		Ok(Self {
