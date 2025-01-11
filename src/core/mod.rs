@@ -26,18 +26,18 @@ impl REIGN {
 			config,
 			state: State::default(),
 		};
-
 		println!("Initializing REIGN with:",);
-		println!(" Port {}", reign.config.port);
-		println!(" Security Level: {}", reign.config.security_level);
-
+		println!("___________________________________");
+		println!("|	    Port 	|  {} |", reign.config.port);
+		println!("|	Security Level  |   {}	|", reign.config.security_level);
+		println!("___________________________________");
 		//initialize state
 		reign.init_state()
 	}
 
 	fn init_state(&self) -> Result<Self, Box<dyn std::error::Error>> {
 		if !self.state.is_initialized {
-			println!("System state initialized");
+			println!("System state initialized  🔴	");
 		}
 		Ok(Self {
 			config: Config {

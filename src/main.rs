@@ -4,7 +4,7 @@ use villin_reign::REIGN;            // Imports the REIGN struct from our library
 use villin_reign::core::Config;     // This works bescuase of the 'pub use core::REIGN' in lib.rs
 
 fn main(){
-    println!("villin_REIGN v{}", villin_reign::VERSION);   // Uses Version constant from lib.
+    println!("villin_REIGN v{} 🦀", villin_reign::VERSION);   // Uses Version constant from lib.
     // New test congigurations (might remove::TODO:: )
     let config = match Config::new(
         String::from("default_api_key"),        // API ket
@@ -19,7 +19,7 @@ fn main(){
     };
     // Initialize REIGN with our config
     match REIGN::new(config) {
-        Ok(_reign) => println!("REIGN system initliazed successfully"),
-        Err(e) => eprintln!("Failed to initliaze REIGN: {}", e)
+        Ok(_reign) => println!("REIGN system initliazed successfully ✅ "),
+        Err(e) => eprintln!("Failed to initliaze REIGN: {}  🚫", e)
     }
 }
