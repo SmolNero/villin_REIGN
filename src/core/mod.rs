@@ -10,7 +10,6 @@ mod state;
 // These are private module declartoins - only visible in scope
 mod display;
 
-
 // re-export statement that consists of:
 pub use config::Config; 	// public -> 'use' type in scope -> This allows other code to use Config directly
 pub use state::State;		// state::State - from state module,import State type
@@ -53,9 +52,6 @@ impl REIGN {
 		println!("          ⠈⠉⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠁ ");
 		println!("									");
 
-
-
-		
 		//initialize state
 		reign.init_state()
 	}
@@ -81,4 +77,3 @@ impl REIGN {
 		self.config.security_level
 	}
 }
-
