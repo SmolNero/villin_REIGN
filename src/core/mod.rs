@@ -14,6 +14,7 @@ mod display;
 // re-export statement that consists of:
 pub use config::Config; 	// public -> 'use' type in scope -> This allows other code to use Config directly
 pub use state::State;		// state::State - from state module,import State type
+use display::LoadingBar;
 
 pub struct REIGN {			// Public struct -> 'struct' defines a new structure
 	config: Config,				//Field named 'config' of a type Config
