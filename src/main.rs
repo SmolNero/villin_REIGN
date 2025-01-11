@@ -9,7 +9,7 @@ fn main(){
     let config = match Config::new(
         String::from("default_api_key"),        // API ket
         8080,                                   // Port number 
-        3                                      // Security leve (1-5)
+        5                                      // Security leve (1-5)
     ) {
         Ok(config) => config,
         Err(e) => {
