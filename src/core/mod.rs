@@ -8,6 +8,8 @@ mod config;
 mod state;
 // locate either  state.rs or state/mod.rsk
 // These are private module declartoins - only visible in scope
+mod display;
+
 
 // re-export statement that consists of:
 pub use config::Config; 	// public -> 'use' type in scope -> This allows other code to use Config directly
@@ -37,7 +39,7 @@ impl REIGN {
 
 	fn init_state(&self) -> Result<Self, Box<dyn std::error::Error>> {
 		if !self.state.is_initialized {
-			println!("System state initialized  🔴	");
+			println!("System state initialized  ⭕	");
 		}
 		Ok(Self {
 			config: Config {
