@@ -1,6 +1,8 @@
 // src/core/mod.rs
 // Core functionality for villin_REIGHN
 
+// test
+
 use std::error;
 mod config;	
 // 'mod' declares a module
