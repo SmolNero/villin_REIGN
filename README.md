@@ -2,6 +2,8 @@
 
 ![REIGN Logo](assets/logo.png)
 
+![Rust crab](assets/rust_crab.gif)
+
 <div align="center">
 
 ![Status](https://img.shields.io/badge/status-active-success.svg)
