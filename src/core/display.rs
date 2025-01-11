@@ -1,6 +1,7 @@
 
 use std::thread;
 use std::time::Duration;
+use std::io::{Write};
 
 pub struct LoadingBar {
     steps: u8,
@@ -10,23 +11,21 @@ pub struct LoadingBar {
 impl LoadingBar {
     pub fn new(message: &str, steps: u8) -> Self {
         Self {
-            steps,
             message: message.to_string(),
+            steps,
         }
     }
 
     pub fn start(&self) {
-        print!("\r{} ", self.message, symobol);
-        let symbols = ["⣾", "⣷", "⣯", "⣟", "⡿", "⢿", "⣻", "⣽"];
-        for _ 0..self.steps {
-            for symbol in symbols.iter() {
+        let spinner = ["⣾", "⣷", "⣯", "⣟", "⡿", "⢿", "⣻", "⣽"];
+        for _ in 0..self.steps {   
+            for symbol in spinner.iter() {
                 print!("\r{} {}", self.message, symbol);
-                std::io::Write::flush(&mut std::io::stdout()).unwrap();
+                std::io::stdout().flush().unwrap();
                 thread::sleep(Duration::from_millis(100));
             }
         }
-        println!("\r{} ✓", self.message );
 
+        println!("\r{} ✓", self.message);
     }
-
 }    

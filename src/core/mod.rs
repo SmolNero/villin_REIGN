@@ -14,7 +14,7 @@ mod display;
 // re-export statement that consists of:
 pub use config::Config; 	// public -> 'use' type in scope -> This allows other code to use Config directly
 pub use state::State;		// state::State - from state module,import State type
-use display::LoadingBar;
+use display::LoadingBar;	// Display module
 
 pub struct REIGN {			// Public struct -> 'struct' defines a new structure
 	config: Config,				//Field named 'config' of a type Config
@@ -29,19 +29,44 @@ impl REIGN {
 			config,
 			state: State::default(),
 		};
+
 		println!("Initializing REIGN with:",);
 		println!("___________________________________");
 		println!("|	    Port 	|  {} |", reign.config.port);
 		println!("|	Security Level  |   {}	|", reign.config.security_level);
 		println!("___________________________________");
+		println!("									");
+		println!("⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀	");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⠀⠀⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢇⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⡿⣸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⢁⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⠇⣼⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⡟⢠⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⠁⣼⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⠇⢠⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠀⠀⣀⣀⣠⣤⣤⡿⠛⠛⠤⢼⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⣶⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⡆⣸⣿⣿⣿⣿⣿⣿⣀⠀⠀⠀⠀⠀ ");
+		println!("⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⡀⠿⢿⣿⠃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀ ");
+		println!("⠀⠀⠀⠀ ⠈ ⣿⣿⣿⣿⣿⣷⣶⣦⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆ "); 
+		println!("          ⠈⠉⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠁ ");
+		println!("									");
+
+
+
+		
 		//initialize state
 		reign.init_state()
 	}
 
 	fn init_state(&self) -> Result<Self, Box<dyn std::error::Error>> {
 		if !self.state.is_initialized {
-			println!("System state initialized  ⭕	");
+			let loader = LoadingBar::new("System state init", 2);
+			loader.start()
+		
 		}
+
 		Ok(Self {
 			config: Config {
 				api_key: self.config.api_key.clone(),
