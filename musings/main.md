@@ -15,7 +15,14 @@ i32	32-bit	-2,147,483,648 to 2,147,483,647
 u64	64-bit	0 to 18,446,744,073,709,551,615
 i64	64-bit	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 
+- Rust prioritizes safety and effeciency by forcing explicit integer
+
 - api_key: String
     - String is a heap-allocated, growable text type
     - &str (string slice) :: it would require a fixed reference string
+
+ -  What Rust looks to avoid with memory:
+        * Memory waste (using large types for small values)
+        * Hidden integer overflows (like in C/C++
+        * Slower performance (less compiler optimization)
 
