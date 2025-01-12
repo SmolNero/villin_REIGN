@@ -18,8 +18,15 @@ i64	64-bit	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 - Rust prioritizes safety and effeciency by forcing explicit integer
 
 - api_key: String
+    
     - String is a heap-allocated, growable text type
+    
+
     - &str (string slice) :: it would require a fixed reference string
+        * &str - borrowed string slice (view of a string)
+        * Fixed memory
+        * Immutable 
+        * Example Usage: let msg: &str = "Hello"l
 
  -  What Rust looks to avoid with memory:
         * Memory waste (using large types for small values)
