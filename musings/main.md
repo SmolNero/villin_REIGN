@@ -20,7 +20,12 @@ i64	64-bit	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 - api_key: String
     
     - String is a heap-allocated, growable text type
-    
+        * A growable heap-allocated string 
+        * fixed in memory
+        * Immutable
+        * Example: let msg = String::from("Hello");
+
+
 
     - &str (string slice) :: it would require a fixed reference string
         * &str - borrowed string slice (view of a string)
@@ -33,3 +38,20 @@ i64	64-bit	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
         * Hidden integer overflows (like in C/C++
         * Slower performance (less compiler optimization)
 
+###  villin_reign/src/core/config.rs
+
+```rust
+
+pub struct Config {
+    // Each line below is a field in the structure
+    
+    pub api_key: String,       // A public field that holds text
+                               // String is Rust's growable text type
+    
+    pub port: u16,           // A public field for port numbers
+                            // u16 is an unsigned 16-bit integer (0 to 65,535)
+    
+    pub security_level: u8,  // A public field for security level
+                            // u8 is an unsigned 8-bit integer (0 to 255)
+
+```
