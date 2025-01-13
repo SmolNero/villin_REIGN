@@ -52,10 +52,12 @@ pub struct Config {
     
     pub security_level: u8,  // A public field for security level
                             // u8 is an unsigned 8-bit integer (0 to 255)
+}
 
-
-
-
-
+impl Congig {
+    pub fn new (api_key: Sting, port: u16, security_level:u8) -> Result<Self, &'static str> {
+        if !(1..5)
+    }
+}
 
 ```
