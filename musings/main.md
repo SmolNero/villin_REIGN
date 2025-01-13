@@ -54,14 +54,17 @@ pub struct Config {
                             // u8 is an unsigned 8-bit integer (0 to 255)
 }
 
-impl Congig {
+impl Config {
     // This is a constructor method name 'new'
     // pub fn means its a public function
     pub fn new (
-        api_key: Sting, 
-        port: u16,
-        security_level:u8
-        ) -> Result<Self, &'static str> {
+        api_key: Sting,     // Parameter 1: takes ownership of a Srting
+        port: u16,          // Parameter 2: a port number
+        security_level:u8   // Parameter 3: security level
+        ) -> Result<Self, &'static str> {   // Returns either Ok(Config) or Err(error message)
+                                            // Self means "the Config type"
+
+
         if !(1..5)
     }
 }
