@@ -13,8 +13,7 @@ impl Config {
 			return Err("Security level must be between 1 and 5");
 		}
 
-		// Validate API key is not empty
-		if api_key.trim().is_empty(){
+		if api_key.trim().is_empty(){ 	// Validate API key is not empty
 			return Err("API key cannot be empty");
 		}
 
