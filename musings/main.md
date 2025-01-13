@@ -63,9 +63,13 @@ impl Config {
         security_level:u8   // Parameter 3: security level
         ) -> Result<Self, &'static str> {   // Returns either Ok(Config) or Err(error message)
                                             // Self means "the Config type"
+        // Checkl if security_level is between 1 and 5
+        // 1..=5 creates a range from 1 to 5 inclusive
+        // ! means "not", & is taking a reference
+        if !(1..5).contains(&security_level){
 
-
-        if !(1..5)
+            
+        }
     }
 }
 
