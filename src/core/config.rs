@@ -32,7 +32,6 @@ impl Config {
 			security_level: 1,
 		}	
 	}
-
 }	
 
 
