@@ -55,7 +55,13 @@ pub struct Config {
 }
 
 impl Congig {
-    pub fn new (api_key: Sting, port: u16, security_level:u8) -> Result<Self, &'static str> {
+    // This is a constructor method name 'new'
+    // pub fn means its a public function
+    pub fn new (
+        api_key: Sting, 
+        port: u16,
+        security_level:u8
+        ) -> Result<Self, &'static str> {
         if !(1..5)
     }
 }
