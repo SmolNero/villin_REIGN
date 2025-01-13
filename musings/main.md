@@ -44,7 +44,6 @@ i64	64-bit	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 
 pub struct Config {
     // Each line below is a field in the structure
-    
     pub api_key: String,       // A public field that holds text
                                // String is Rust's growable text type
     
@@ -53,5 +52,10 @@ pub struct Config {
     
     pub security_level: u8,  // A public field for security level
                             // u8 is an unsigned 8-bit integer (0 to 255)
+
+
+
+
+
 
 ```

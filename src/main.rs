@@ -7,7 +7,7 @@ fn main(){
     println!("villin_REIGN v{} 🦀", villin_reign::VERSION);   // Uses Version constant from lib.
     // New test congigurations (might remove::TODO:: )
     let config = match Config::new(
-        String::from("default_api_key"),        // API ket
+        String::from("default_api_key"),        // API key
         8080,                                   // Port number 
         5                                      // Security leve (1-5)
     ) {
