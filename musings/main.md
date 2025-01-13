@@ -67,8 +67,8 @@ impl Config {
         // 1..=5 creates a range from 1 to 5 inclusive
         // ! means "not", & is taking a reference
         if !(1..5).contains(&security_level){
-
-            
+            // If check fails, return errror
+            return Err("security level must be between 1 and 5");
         }
     }
 }
