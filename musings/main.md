@@ -70,7 +70,9 @@ impl Config {
             // If check fails, return errror
             return Err("security level must be between 1 and 5");
         }
+    
     }
+
 }
 
 ```
