@@ -2,9 +2,9 @@
 
 pub struct Config {
 	// Configuration fields will go here
-	pub api_key: String,
-	pub port: u16,
-	pub security_level: u8,
+	pub api_key: String,		 //
+	pub port: u16,				// Public port #s - u16 is an unsigned unsigned 16-bit int (0 to 65,535)
+	pub security_level: u8,	   // A pub field - u8 is an unsigned 8-bit int (0 - 255)
 }
 
 impl Config {
