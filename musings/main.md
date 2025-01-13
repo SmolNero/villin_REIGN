@@ -65,7 +65,8 @@ impl Config {
                                             // Self means "the Config type"
         // Checkl if security_level is between 1 and 5
         // 1..=5 creates a range from 1 to 5 inclusive
-        // ! means "not", & is taking a reference
+        // ! means "not", & is taking a reference (similar to a pointer)
+        // 'static -> a lifetime specifier, meaning the reference lives for the entire duration for the program
         if !(1..5).contains(&security_level){
             // If check fails, return errror
             return Err("security level must be between 1 and 5");
