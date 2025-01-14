@@ -73,11 +73,26 @@ impl Config {
         if !(1..5).contains(&security_level){   
             // If check fails, return errror
             return Err("security level must be between 1 and 5");
-                //Ensures
+                //Ensures security_level is between 1 and 5 - if not, error
         }
-            
+
+        if api_key.trim().is_empty() {
+            return Err("API key cannot be empty")
+
+        }
+
+        Ok(Self {
+            api_key,
+            port,
+            security_level,
+        })        
     }
 
+    pub fn default() -> Self {
+        api_key: String::from("default_key"),
+        port: 8080,
+        security_level 1,
+    }
 }
 
 ```
