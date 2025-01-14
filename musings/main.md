@@ -58,7 +58,7 @@ impl Config {
     // This is a constructor method name 'new'
     // pub fn means its a public function
     pub fn new (
-        api_key: Sting,     // Parameter 1: takes ownership of a Srting
+        api_key: String,     // Parameter 1: takes ownership of a Srting
         port: u16,          // Parameter 2: a port number
         security_level:u8   // Parameter 3: security level
         ) -> Result<Self, &'static str> {   // Returns either Ok(Config) or Err(error message)
@@ -67,13 +67,23 @@ impl Config {
         // 1..=5 creates a range from 1 to 5 inclusive
         // ! means "not", & is taking a reference (similar to a pointer)
         // 'static -> a lifetime specifier, meaning the reference lives for the entire duration for the program
-        if !(1..5).contains(&security_level){
+        // &'static str represents a ref to a string that is stored in the programs binary and never deallocates
+        // ' denotes a lifetime parameter
+
+        if !(1..5).contains(&security_level){   
             // If check fails, return errror
             return Err("security level must be between 1 and 5");
+                //Ensures
         }
-    
+            
     }
 
 }
 
 ```
+
+ - Understanding Lifetimes
+    * Life times in Rust are explicit annotations that tell the compiler how long a reference should be valid. Rust uses them to prevent dangling references and ensure memory safety
+- If an error occurs, it returns Err("Security level must be between 1 and 5").
+    * "Security level must be between 1 and 5" is a string literal (&'static str).
+    * This is safe because string literals have a 'static lifetime.
