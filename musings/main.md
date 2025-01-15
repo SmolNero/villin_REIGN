@@ -82,9 +82,9 @@ impl Config {
         }
 
         Ok(Self {
-            api_key,
-            port,
-            security_level,
+            api_key,        // Field init shorthand (same as api_key: api_key)
+            port,           // Same as port: port
+            security_level, // Sam
         })        
     }
 
@@ -92,6 +92,11 @@ impl Config {
         api_key: String::from("default_key"),
         port: 8080,
         security_level 1,
+        
+
+
+
+        }
     }
 }
 
