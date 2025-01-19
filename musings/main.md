@@ -107,3 +107,65 @@ impl Config {
 - If an error occurs, it returns Err("Security level must be between 1 and 5").
     * "Security level must be between 1 and 5" is a string literal (&'static str).
     * This is safe because string literals have a 'static lifetime.
+
+
+###  villin_reign/src/lib.rs
+
+  ##### villin_REIGN - Military-grade IoT security
+
+```rust
+
+pub mod core;
+
+```
+- Declares and makes the core module public
+- Looks for either src/core/mod.rs or src/core.rs
+- 'pub' meanss ither code can access this module
+
+```rust
+
+pub mod security;
+
+```   
+
+- Declares and makes the security public
+- Look for src/security/mod.rs or src/security.rs
+
+```rust
+
+pub mod api;
+
+```
+
+- Declares and makes tge api module public
+- Looks for src/api/mod.rs or src/api.rs
+
+```rust
+
+pub mod monitoring;
+
+```
+
+- Declares and makes tthe monitoring module public
+- Looks for src/monitoring/mod.rs or src/monitoring
+
+```rust
+
+pub use core::REIGN;
+
+```
+
+- Re-exports the REIGN struct from the core module
+- This means users can write 'use villin_reign::REIGN'
+- Instead of 'use villin_reign::core::REIGN'
+- Library version
+
+```rust
+
+pub const VERSION: &str = env!("CARGO_PKG_VERSION");
+
+``` 
+ - Creates a public constant VERSION
+ - &str means its a string reference
+ - env! is a macro that gets the version from your Cargo.toml
+ - at compile time

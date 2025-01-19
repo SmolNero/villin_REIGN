@@ -48,8 +48,8 @@ impl REIGN {
 		println!("⠀⠀⠀⠀⣶⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⡆⣸⣿⣿⣿⣿⣿⣿⣀⠀⠀⠀⠀⠀ ");
 		println!("⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⡀⠿⢿⣿⠃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡀⠀ ");
 		println!("⠀⠀⠀⠀ ⠈ ⣿⣿⣿⣿⣿⣷⣶⣦⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆ "); 
-		println!("          ⠈⠉⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠁ ");
-		println!("									");
+		println!("          ⠈⠉⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠛⠁  ");
+		println!("								    ");
 
 		//initialize state
 		reign.init_state()
