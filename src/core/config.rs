@@ -9,9 +9,9 @@ pub struct Config {
 impl Config {
 	pub fn new(api_key: String, port: u16, security_level:u8) -> Result<Self, &'static str> {
 		if !(1..=5).contains(&security_level) {
-			s Err("Security level must be between 1 and 5");
+			return Err("Security level must be between 1 and 5");
 		}
-
+		
 		if api_key.trim().is_empty(){ 	// Validate API key is not empty
 			return Err("API key cannot be empty");
 		}
