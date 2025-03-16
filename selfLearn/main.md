@@ -169,3 +169,4 @@ pub const VERSION: &str = env!("CARGO_PKG_VERSION");
  - &str means its a string reference
  - env! is a macro that gets the version from your Cargo.toml
  - at compile time
+

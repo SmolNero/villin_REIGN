@@ -28,4 +28,4 @@ impl LoadingBar {
 
         println!("\r{} ✓", self.message);
     }
-}     
+}    
