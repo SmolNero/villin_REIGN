@@ -8,9 +8,11 @@
 
 ![Project Status](https://img.shields.io/badge/status-work--in--progress-yellow)[![Rust](https://img.shields.io/badge/rust-1.75%2B-blue.svg)](https://www.rust-lang.org)[![License](https://img.shields.io/badge/license-Military%20Use-blue.svg)](#license)[![Security](https://img.shields.io/badge/security-military%20grade-green.svg)](#security)
 
-# 🚧 Work in Progress 🚧
+🚧 Work in Progress 🚧
 
 **This project is in an early stage of development and is not ready for production use. Breaking changes are likely, and documentation may be incomplete. Use at your own risk! Contributions and feedback are welcome.**
+
+</div>
 
 ## Mission Statement
 
